@@ -6,7 +6,7 @@ function display(content) {
 // create a function that takes a name/string as a parameter
 // and returns "hi my name is" parameter given
 
-function speak(name) {
+function name(name) {
     return "Hi, my name is " + name + "."
 }
 
@@ -23,13 +23,78 @@ function firstP(fAttribute) {
     return "Your ninja wears " + fAttribute + "."
 }
 function secondP(sAttribute) {
-    return "Your ninja is very" + sAttribute + "."
+    return "Your ninja is very " + sAttribute + "."
 }
 function thirdP(tAttribute) {
     return "Your ninja is really just a " + tAttribute + "."
 }
 
-display(speak("William"));
-display(firstP("Full Plate Armor"));
-display(secondP("Chivalrous"));
-display(thirdP("Knight"))
+// Object oriented programming
+// - encapsulation
+// - abstraction
+// - 
+
+// OOP encapsulation grouping behaviours
+const ninja = {
+    name(name) {
+        return "Hi, my name is " + name + "."
+    },
+    firstP(fAttribute) {
+        return "Your ninja wears " + fAttribute + "."
+    },
+    secondP(sAttribute) {
+        return "Your ninja is very " + sAttribute + "."
+    },
+    thirdP(tAttribute) {
+        return "Your ninja is really just a " + tAttribute + "."
+    },
+    
+    // display(ninja.name("William"));
+    // display(ninja.firstP("Full Plate Armor"));
+    // display(ninja.secondP("Chivalrous"));
+    // display(ninja.thirdP("Knight"));
+
+}
+
+
+
+// create a class for ninja factory
+// OOP abstraction, hiding complexity
+class King {
+    constructor(name, firstP, secondP, thirdP){
+        this.nameInsideKing  = name;
+        this.firstP          = firstP;
+        this.secondP         = secondP;
+        this.thirdP          = thirdP;
+    }
+
+    name(){
+        return "Hi, my name is " + this.nameInsideKing + ".";
+    }
+
+    armor(){
+        return "Your ninja wears " + this.firstP + ".";
+    }
+
+    attribute(){
+        return "Your ninja is very " + this.secondP + ".";
+    }
+
+    identity(){
+        return "Your ninja is really just a " + this.thirdP + ".";
+    }
+
+}
+
+let rufus = new King("Rufus", "Full Plate Armor", "Honorable", "Knight")
+let william = new King("William", "Full Mail Armor", "Dreaded", "Man-at-arms")
+
+display(rufus.name());
+display(rufus.armor());
+display(rufus.attribute());
+display(rufus.identity());
+
+display(william.name());
+display(william.armor());
+display(william.attribute());
+display(william.identity());
