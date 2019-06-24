@@ -11,12 +11,6 @@ function name(name) {
 }
 
 
-
-
-
-
-
-
 // create 3 functions that descripe the powers of a ninja you would like to create
 
 function firstP(fAttribute) {
@@ -86,15 +80,31 @@ class King {
 
 }
 
-let rufus = new King("Rufus", "Full Plate Armor", "Honorable", "Knight")
+// let rufus = new King("Rufus", "Full Plate Armor", "Honorable", "Knight")
+
+
+// display(william.name());
+// display(william.armor());
+// display(william.attribute());
+// display(william.identity());
+
+// OOP polymorphism
+class CoochieGod extends King {
+    constructor(name, armor, attribute, identity){
+        super(name,armor,attribute,identity)
+        this.village = "Caen"
+    }
+
+    combo(){
+        return "Activate: " + super.attribute() + " Combo with " + super.armor()
+    }
+}
+let rufus = new CoochieGod("Rufus", "Full Plate Armor", "Honorable", "Knight")
 let william = new King("William", "Full Mail Armor", "Dreaded", "Man-at-arms")
+
+
 
 display(rufus.name());
 display(rufus.armor());
 display(rufus.attribute());
 display(rufus.identity());
-
-display(william.name());
-display(william.armor());
-display(william.attribute());
-display(william.identity());
