@@ -46,7 +46,7 @@ class CoochieGod extends Parent {
     }
 
     combo(){
-        return super.attribute() + " and " + super.selfImage()
+        return super.name() + super.selfImage() + super.attribute() + " and " + super.selfImage()
     }
 }
 let bren = new CoochieGod("Bren", "gay boi","cthulu worshipper","smol pp")
