@@ -1,5 +1,5 @@
 // create a function that console logs any parameters given
-function funLog(content) {
+function display(content) {
     console.log(content)
 }
 
@@ -10,7 +10,6 @@ function speak(name) {
     return "Hi, my name is " + name + "."
 }
 
-funLog(speak("jimmy"))
 
 
 
@@ -30,7 +29,7 @@ function thirdP(tAttribute) {
     return "Your ninja is really just a " + tAttribute + "."
 }
 
-display(name("William"));
-display(firstp("Full Plate Armor"));
+display(speak("William"));
+display(firstP("Full Plate Armor"));
 display(secondP("Chivalrous"));
 display(thirdP("Knight"))
