@@ -108,3 +108,4 @@ display(rufus.name());
 display(rufus.armor());
 display(rufus.attribute());
 display(rufus.identity());
+display(rufus.village);
